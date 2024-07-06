@@ -4,7 +4,7 @@ const Student = require('../models/Student');
 // Get aggregated metrics
 exports.getMetrics = async (req, res) => {
   try {
-    const students = await Student.find();
+    const students = await Student.find(); 
 
     const totalRatings = students.reduce((acc, student) => acc + student.rating, 0);
     const totalProblemsSolved = students.reduce((acc, student) => acc + student.problemsSolved, 0);
